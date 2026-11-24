@@ -5,7 +5,6 @@
   "description": "React Native specific linting rules for ESLint",
   "main": "index.js",
   "scripts": {
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint ./lib && eslint ./tests",
     "test": "npm run lint && npm run unit-test",
     "unit-test": "nyc --silent --reporter=text mocha tests/**/*.js"
@@ -25,7 +24,6 @@
   "devDependencies": {
     "@typescript-eslint/parser": "^2.0.0",
     "babel-eslint": "^10.0.3",
-    "coveralls": "^3.0.7",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
@@ -50,5 +48,11 @@
   "dependencies": {
     "@babel/traverse": "^7.7.4",
     "eslint-plugin-react-native-globals": "^0.1.1"
+  },
+  "resolutions": {
+    "mkdirp": "0.5.6"
+  },
+  "overrides": {
+    "mkdirp": "0.5.6"
   }
 }
